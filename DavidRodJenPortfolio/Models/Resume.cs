@@ -31,5 +31,8 @@ namespace DavidRodJenPortfolio.Models
         /// </summary>
         public string Description { get; set; }
 
+        public List<Resume> FullResume { get; set; }
+
+
     }
 }
