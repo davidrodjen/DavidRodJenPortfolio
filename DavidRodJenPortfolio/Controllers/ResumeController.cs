@@ -1,47 +1,32 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DavidRodJenPortfolio.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Collections;
 
 namespace DavidRodJenPortfolio.Controllers
 {
     public class ResumeController : Controller
     {
-        //private readonly ApplicationDbContext _Context;
-
-        //public ResumeController(ApplicationDbContext Context)
-        //{
-        //    _Context = Context;
-        //}
-        //public async Task<IActionResult> Resume()
-        //{
-        //    ViewBag.ResumeBag = await ResumeDB.GetAllExperience(_Context);
-        //    return View();
-        //}
 
         public IActionResult Resume()
         {
+            ViewBag.ResumeBag = GetAllExperience<IList>();
             return View();
         }
 
-
-        [HttpPost]
-        public async Task<IActionResult> Add(Resume resume)
+        public IList<Resume> GetAllExperience<IList>()
         {
-            //if (ModelState.IsValid)
-            //{
-            //    await resumeDB.Add(resume, _Context);
-            //    //TempData["Message"] = $"{resume.Title} added successfully";
-            //    return RedirectToAction(nameof(ResumeIndex));
-            //}
-
-            return View();
-        }
-
-
-        public async Task<IActionResult> ResumeIndex()
+            List<Resume> FullResume = new List<Resume>()
         {
-            //ViewBag.ResumeBag = await ResumeDB.GetAllExperience(_Context);
-            return View();
+            new Resume{Company = "CompanyTest", Position = "PositionTest", Description = "DescriptionTest"},
+            new Resume{Company = "CompanyTest2", Position = "PositionTest2", Description = "DescriptionTest2"}
+        };
+
+            return FullResume;
+
         }
+
     }
 }
