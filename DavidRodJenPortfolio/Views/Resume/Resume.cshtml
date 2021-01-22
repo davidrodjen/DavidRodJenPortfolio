@@ -4,27 +4,45 @@
 	ViewData["Title"] = "Resume";
 }
 
-<div class="text-center">
+@*<div class="text-center">
 	<h2>Check out the cool things I have done!</h2>
+</div>*@
+
+<h1 style="margin-top:2.5em; margin-bottom:.25em;">Language & Technologies</h1>
+<div style="overflow: hidden;">
+	<h5 class="font-weight-bold;" style="float: left;">Proficient:</h5>
+	<p style="float: right; margin-right:13em">C#, ASP.NET Core MVC, HTML5, Java, Entity Framework, Microsoft SQL Server, Visual Studio, VSCode, GitHub</p>
+</div>
+<div style="overflow: hidden;">
+	<h5 class="font-weight-bold;" style="float: left;">Exposure:</h5>
+	<p style="float: right; margin-right:34em">Python, JavaScript, C++, PowerShell, Typescript, CSS3, Android Studio</p>
+</div>
+<div style="overflow: hidden;">
+	<h5 class="font-weight-bold;" style="float: left;">Applications:</h5>
+	<p style="float: right; margin-right:15em">Office 365 Applications, ServiceNow, Microsoft 365, Microsoft Teams, GitHub Source Control, PowerBi</p>
+</div>
+
+<h1 style="margin-top: 1em; margin-bottom: .25em;">Education & Training</h1>
+<div style="overflow: hidden;">
+	<h5 class="font-weight-bold;" style="float: left;">Computer Programming AAT</h5>
+	<p style="float: right; margin-right:21em">
+		Clover Park Technical College September 2020 | Presidents List | GPA 3.97 | .NET Developer Certification 2020
+	</p>
+</div>
+<div style="overflow: hidden;">
+	<h5 class="font-weight-bold;" style="float: left;">Bachelor of Arts</h5>
+	<p style="float: right; margin-right:51em">University of Washington June 2013 | Presidents List</p>
 </div>
 
 
-<h1 style="margin-top:1em">Education</h1>
-
-<p>Associates of Applied Technology, Computer Programming, Cloverpark Technical College, September 2020</p>
-<p>Bachelor of Arts, University of Washington	June 2013</p>
-
-<h1 style="padding-top:1em;padding-bottom:1em">Qualifications</h1>
-
-
+<h1 style="margin-top: 1em; margin-bottom: .25em;">Qualifications</h1>
 
 @foreach (Resume resume in ViewBag.ResumeBag)
 {
 	<div class="jumbotron">
-		<h2>@Html.DisplayFor(modelItem => resume.Company)</h2>
+		<h3>@Html.DisplayFor(modelItem => resume.Company)</h3>
 		<p class="lead">@Html.DisplayFor(modelItem => resume.Position)</p>
 		<hr class="my-4">
 		<p>@Html.DisplayFor(modelItem => resume.Description)</p>
 	</div>
-
 }

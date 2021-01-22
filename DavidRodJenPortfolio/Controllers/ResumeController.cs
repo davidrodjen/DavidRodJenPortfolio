@@ -30,9 +30,9 @@ namespace DavidRodJenPortfolio.Controllers
 
         }
 
-        string Company1 = "DXC Technologies- Redmond Microsoft Campus-Seattle, WA February 2020- Present";
-        string Position1 = "Senior Field Technician IT/Audio Visual";
-        string Description1 = "     Self-managing time and equipment under directive of senior regional managers. " +
+        readonly string Company1 = "DXC Technologies- Redmond Microsoft Campus-Seattle, WA February 2020- Present";
+        readonly string Position1 = "Senior Field Technician IT/Audio Visual";
+        readonly string Description1 = "     Self-managing time and equipment under directive of senior regional managers. " +
             "Engage in remote and onsite IT solutions, Quick Assist and streamlined " +
             "solutions via accessible assortment of technical libraries of documentation. " +
             "Solve a variety of issues regarding VPN connections and application hang/crash/freeze. " +
@@ -44,9 +44,9 @@ namespace DavidRodJenPortfolio.Controllers
 
 
 
-        string Company2 = "Compass Group PLC- Redmond Microsoft Campus-Seattle, WA July 2015- March 2020";
-        string Position2 = "Audio Visual Technician/Preventative Maintenance Tier 1";
-        string Description2 = "     Inspect technologies and electrical equipment to insure first time quality.Daily use of " +
+        readonly string Company2 = "Compass Group PLC- Redmond Microsoft Campus-Seattle, WA July 2015- March 2020";
+        readonly string Position2 = "Audio Visual Technician/Preventative Maintenance Tier 1";
+        readonly string Description2 = "     Inspect technologies and electrical equipment to insure first time quality.Daily use of " +
             "company inventory control programs.Manage personal equipment inventory utilizing basic coding " +
             "applications for programming behind network services. Provides onsite technical support for the " +
             "Microsoft Campus ensuring seamless utilization of conference and private spaces.Having a thorough " +
@@ -56,9 +56,9 @@ namespace DavidRodJenPortfolio.Controllers
 
 
 
-        string Company3 = "The Seattle Gym- Seattle, WA September 2013- June 2015";
-        string Position3 = "Resident Videographer";
-        string Description3 = "     Conduct LiveStream Media Studio capturing real-time footage for exercise video programs. " +
+        readonly string Company3 = "The Seattle Gym- Seattle, WA September 2013- June 2015";
+        readonly string Position3 = "Resident Videographer";
+        readonly string Description3 = "     Conduct LiveStream Media Studio capturing real-time footage for exercise video programs. " +
             "Manage all teams associated with Videography program. " +
             "Assembled and fixed exercise equipment using various types of hand, power and pneumatic tools." +
             "Participated in complete studio remodel including replacing flooring and structural repairs. " +
@@ -66,9 +66,9 @@ namespace DavidRodJenPortfolio.Controllers
             "Inspected videos and used live editing software to direct, cut and assemble footage to insure 100% customer satisfaction.";
 
 
-        string Company4 = "The Seattle Gym- Seattle, WA";
-        string Position4 = "General Manager/Billing Coordinator";
-        string Description4 = "     Led a service team of 35 employees.Worked with team members to streamline processes and improvements. " +
+        readonly string Company4 = "The Seattle Gym- Seattle, WA";
+        readonly string Position4 = "General Manager/Billing Coordinator";
+        readonly string Description4 = "     Led a service team of 35 employees.Worked with team members to streamline processes and improvements. " +
                 "Led monthly safety meetings, and daily stand-up meetings. " +
                 "Daily use of Microsoft Excel, Word and Outlook. " +
                 "Ran individual improvement meetings for each team member and verified each employee had appropriate certifications. " +
