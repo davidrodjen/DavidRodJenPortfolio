@@ -12,4 +12,8 @@
     <Folder Include="Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\MainMenu.png" />
+  </ItemGroup>
+
 </Project>
