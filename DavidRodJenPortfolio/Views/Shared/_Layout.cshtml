@@ -12,7 +12,7 @@
 
 <body>
 	<header>
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left" style="justify-content:flex-start">
 			<a class="navbar-brand" style="font-size:45px !important;color:#66FCF1 !important" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -34,8 +34,8 @@
 			</div>
 		</nav>
 
-		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary box-shadow mb-3" style="padding-left: 23%;margin: 0 !important;background-color:#66FCF1 !important;text-align:left">
-			<span class="strike" style="width:70%">    </span>
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary box-shadow mb-3 flex-column" style="margin: 0 !important;background-color:#66FCF1 !important;text-align:left">
+			<span class="strike" style="width:70%;">    </span>
 		</nav>
 	</header>
 	<div class="container">
@@ -69,6 +69,8 @@
 
 	.strike {
 		position: relative;
+		margin-bottom:-2em;
+		margin-top:1em;
 	}
 
 	.strike::after {

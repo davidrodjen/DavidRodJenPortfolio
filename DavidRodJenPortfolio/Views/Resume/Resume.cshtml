@@ -8,7 +8,94 @@
 	<h2>Check out the cool things I have done!</h2>
 </div>*@
 
-<h1 style="margin-top:2.5em; margin-bottom:.25em;">Language & Technologies</h1>
+<body>
+	<div>
+		<div class="gradient-border" style="background-color:floralwhite; margin-top:5em;border-radius:25px;padding-top:1em;padding-left:1em;">
+			<h1 style="margin-bottom:.25em;">Language & Technologies</h1>
+			<div style="overflow: hidden;">
+				<h5 class="font-weight-bold;" style="float: left;">Proficient:</h5>
+				<p style="padding-left:10em">C#, ASP.NET Core MVC, HTML5, Java, Entity Framework, Microsoft SQL Server, Visual Studio, VSCode, GitHub</p>
+			</div>
+			<div style="overflow: hidden;">
+				<h5 class="font-weight-bold;" style="float: left;">Exposure:</h5>
+				<p style="padding-left:9em">Python, JavaScript, C++, PowerShell, Typescript, CSS3, Android Studio</p>
+			</div>
+			<div style="overflow: hidden;">
+				<h5 class="font-weight-bold;" style="float: left;">Applications:</h5>
+				<p style="padding-left:12em">Office 365 Applications, ServiceNow, Microsoft 365, Microsoft Teams, GitHub Source Control, PowerBi</p>
+			</div>
+			<h1 style="margin-top: .25em; margin-bottom: .2em;">Education & Training</h1>
+			<div style="overflow: hidden;">
+				<h5 class="font-weight-bold;" style="float: left;">Computer Programming AAT</h5>
+				<p style="float:right;margin-right:20em">
+					Clover Park Technical College September 2020 | Presidents List | GPA 3.97 | .NET Developer Certification 2020
+				</p>
+			</div>
+			<div style="overflow: hidden;">
+				<h5 class="font-weight-bold;" style="float: left;">Bachelor of Arts</h5>
+				<p style="float: right; margin-right:50em">University of Washington June 2013 | Presidents List</p>
+			</div>
+		</div>
+		<h1 class="gradient-border" style="padding-top:.5em;padding-bottom:.5em;margin-top:1em;margin-bottom:.5em;background-color:floralwhite;text-align:center;border-radius: 25px;">Qualifications</h1>
+
+		@foreach (Resume resume in ViewBag.ResumeBag)
+		{
+			<div class="jumbotron gradient-border" style="background-color:floralwhite">
+				<h3>@Html.DisplayFor(modelItem => resume.Company)</h3>
+				<p class="lead">@Html.DisplayFor(modelItem => resume.Position)</p>
+				<hr class="my-4">
+				<p>@Html.DisplayFor(modelItem => resume.Description)</p>
+			</div>
+		}
+	</div>
+</body>
+
+<style>
+	body {
+		background-image: url(/images/pawel-czerwinski-Nho-1hXd3d4-unsplash-darker.jpg) !important;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.gradient-border {
+		--border-width: 5px;
+		position: relative;
+		width: inherit;
+		height: inherit;
+		border-radius: var(--border-width);
+		padding:.5em .5em .5em .5em;
+	}
+
+	.gradient-border::after {
+		position: absolute;
+		content: "";
+		top: calc(-1 * var(--border-width));
+		left: calc(-1 * var(--border-width));
+		z-index: -1;
+		width: calc(100% + var(--border-width) * 2);
+		height: calc(100% + var(--border-width) * 2);
+		background: linear-gradient(
+		  60deg,
+		  hsl(213, 24%, 16%),
+		  hsl(210, 2%, 78%),
+		  hsl(176, 96%, 45%),
+		  hsl(177, 40%, 45%)
+		);
+		background-size: 300% 300%;
+		background-position: 0 50%;
+		border-radius: calc(2 * var(--border-width));
+		animation: moveGradient 6s alternate infinite;
+	  }
+
+@@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+</style>
+
+@*<h1 style="margin-top:2.5em; margin-bottom:.25em;">Language & Technologies</h1>
 <div style="overflow: hidden;">
 	<h5 class="font-weight-bold;" style="float: left;">Proficient:</h5>
 	<p style="float: right; margin-right:13em">C#, ASP.NET Core MVC, HTML5, Java, Entity Framework, Microsoft SQL Server, Visual Studio, VSCode, GitHub</p>
@@ -45,4 +132,4 @@
 		<hr class="my-4">
 		<p>@Html.DisplayFor(modelItem => resume.Description)</p>
 	</div>
-}
+}*@
