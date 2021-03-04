@@ -4,10 +4,6 @@
 	ViewData["Title"] = "Resume";
 }
 
-@*<div class="text-center">
-	<h2>Check out the cool things I have done!</h2>
-</div>*@
-
 <body>
 	<div>
 		<div class="gradient-border" style="background-color:floralwhite; margin-top:5em;border-radius:25px;padding-top:1em;padding-left:1em;">
@@ -36,17 +32,19 @@
 				<p style="float: right; margin-right:50em">University of Washington June 2013 | Presidents List</p>
 			</div>
 		</div>
-		<h1 class="gradient-border" style="padding-top:.5em;padding-bottom:.5em;margin-top:1em;margin-bottom:.5em;background-color:floralwhite;text-align:center;border-radius: 25px;">Qualifications</h1>
+		<h1 class="gradient-border" style="padding-top:.5em;padding-bottom:.5em;margin-top:1em;margin-bottom:.35em;background-color:floralwhite;text-align:center;border-radius: 25px;">Qualifications</h1>
+		<div class="timeline">
+			@foreach (Resume resume in ViewBag.ResumeBag)
+			{
+					<h3 class="timeline__item timeline__item--year">@Html.DisplayFor(modelItem => resume.Company)</h3>
+					<hr class="my-4">
+					<div class="timeline__item">
+						<h1 style="background-color:floralwhite;padding:.75rem;margin-bottom:0;font-size: 1.2rem;text-align:center;border-bottom:outset;border-bottom-color:hotpink;">@Html.DisplayFor(modelItem => resume.Position)</h1>
+						<p class="timeline__title">@Html.DisplayFor(modelItem => resume.Description)</p>
+					</div>
+			}
+		</div>
 
-		@foreach (Resume resume in ViewBag.ResumeBag)
-		{
-			<div class="jumbotron gradient-border" style="background-color:floralwhite">
-				<h3>@Html.DisplayFor(modelItem => resume.Company)</h3>
-				<p class="lead">@Html.DisplayFor(modelItem => resume.Position)</p>
-				<hr class="my-4">
-				<p>@Html.DisplayFor(modelItem => resume.Description)</p>
-			</div>
-		}
 	</div>
 </body>
 
@@ -88,48 +86,120 @@
 		animation: moveGradient 6s alternate infinite;
 	  }
 
-@@keyframes moveGradient {
-  50% {
-    background-position: 100% 50%;
-  }
-}
+	@@keyframes moveGradient {
+	  50% {
+		background-position: 100% 50%;
+	  }
+	}
+
+	.timeline {
+	  position: relative;
+	  padding: 1rem;
+	  margin: 0 auto;
+	  max-width: 1500px;
+	}
+		.timeline:before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			border: 1px solid hsl(177, 40%, 45%);
+			right: 40px;
+			top: 0;
+		}
+	.timeline:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	@@media screen and (min-width: 700px) {
+	  .timeline {
+		padding: 2rem;
+	  }
+	  .timeline:before {
+		left: calc(50% - 1px);
+		right: auto;
+	  }
+	}
+
+	.timeline__item {
+		border: 3px solid hsl(177, 40%, 45%);
+		border-image: auto;
+		border-image-slice: 1;
+		position: relative;
+		margin: 1rem 3rem 1rem 1rem;
+		clear: both;
+		font-size:larger;
+	}
+	.timeline__item:after, .timeline__item:before {
+	  content: '';
+	  position: absolute;
+	}
+		.timeline__item:before {
+			right: -10px;
+			top: calc(50% - 5px);
+			border-style: solid;
+			border-color: hotpink hsl(177, 40%, 45%) transparent transparent;
+			border-width: 10px;
+			transform: rotate(45deg);
+		}
+	@@media screen and (min-width: 700px) {
+		.timeline__item {
+			width: 44%;
+			margin: 1rem;
+		}
+
+			.timeline__item:nth-of-type(2n) {
+				float: right;
+				margin: 1rem;
+				border-image: auto;
+				border-image-slice: 1;
+			}
+
+				.timeline__item:nth-of-type(2n):before {
+					right: auto;
+					left: -10px;
+					border-color: transparent transparent hsl(177, 40%, 45%) hotpink;
+				}
+	}
+
+	.timeline__item--year {
+	  text-align: center;
+	  max-width: 35rem;
+	  margin: 0 48px 0 auto;
+	  font-size: 1.2rem;
+	  background-color: floralwhite;
+	  line-height: 1;
+	  border-image: none;
+	  padding: 1rem;
+	}
+	.timeline__item--year:before {
+	  display: none;
+	}
+	@@media screen and (min-width: 700px) {
+	  .timeline__item--year {
+		text-align: center;
+		margin: 0 auto;
+	  }
+	  .timeline__item--year:nth-of-type(2n) {
+		float: none;
+		margin: 0 auto;
+		border-image: none;
+	  }
+	  .timeline__item--year:nth-of-type(2n):before {
+		display: none;
+	  }
+	}
+
+	.timeline__title {
+	  margin: 0;
+	  padding: 1rem;
+	  font-size: .9em;
+	  background-color:floralwhite;
+	}
+
+	.timeline__blurb {
+	  line-height: 1.5;
+	  font-size: 1rem;
+	  margin: 0.5rem 0 0;
+	}
 </style>
-
-@*<h1 style="margin-top:2.5em; margin-bottom:.25em;">Language & Technologies</h1>
-<div style="overflow: hidden;">
-	<h5 class="font-weight-bold;" style="float: left;">Proficient:</h5>
-	<p style="float: right; margin-right:13em">C#, ASP.NET Core MVC, HTML5, Java, Entity Framework, Microsoft SQL Server, Visual Studio, VSCode, GitHub</p>
-</div>
-<div style="overflow: hidden;">
-	<h5 class="font-weight-bold;" style="float: left;">Exposure:</h5>
-	<p style="float: right; margin-right:34em">Python, JavaScript, C++, PowerShell, Typescript, CSS3, Android Studio</p>
-</div>
-<div style="overflow: hidden;">
-	<h5 class="font-weight-bold;" style="float: left;">Applications:</h5>
-	<p style="float: right; margin-right:15em">Office 365 Applications, ServiceNow, Microsoft 365, Microsoft Teams, GitHub Source Control, PowerBi</p>
-</div>
-
-<h1 style="margin-top: 1em; margin-bottom: .25em;">Education & Training</h1>
-<div style="overflow: hidden;">
-	<h5 class="font-weight-bold;" style="float: left;">Computer Programming AAT</h5>
-	<p style="float: right; margin-right:21em">
-		Clover Park Technical College September 2020 | Presidents List | GPA 3.97 | .NET Developer Certification 2020
-	</p>
-</div>
-<div style="overflow: hidden;">
-	<h5 class="font-weight-bold;" style="float: left;">Bachelor of Arts</h5>
-	<p style="float: right; margin-right:51em">University of Washington June 2013 | Presidents List</p>
-</div>
-
-
-<h1 style="margin-top: 1em; margin-bottom: .25em;">Qualifications</h1>
-
-@foreach (Resume resume in ViewBag.ResumeBag)
-{
-	<div class="jumbotron">
-		<h3>@Html.DisplayFor(modelItem => resume.Company)</h3>
-		<p class="lead">@Html.DisplayFor(modelItem => resume.Position)</p>
-		<hr class="my-4">
-		<p>@Html.DisplayFor(modelItem => resume.Description)</p>
-	</div>
-}*@
