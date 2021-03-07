@@ -1,11 +1,10 @@
 ﻿<body>
 	<div class="btn-group btn-group-justified; d-flex justify-content-center" style="margin-top: 6em;margin-right:1em">
-			<a class="btn btn-primary" style="color:white;font-size:18px;margin-left:.75em" href="https://www.github.com/davidrodjen" role="button">David's Github</a>
-			<a class="btn btn-primary" style="color:white;font-size:18px;margin-left:2em" href="https://www.linkedin.com/in/david-rodriguez-jenkins-238511167" role="button">David's LinkedIn</a>
-		</div>
+		<h1 class="gradient-border" style="padding-top:.5em;padding-bottom:.5em;padding-left:10rem;padding-right:10rem;margin-top:1em;margin-bottom:.35em;background-color:floralwhite;text-align:center;border-radius: 25px;">Projects</h1>
+	</div>
 
 	<div class="card-deck">
-		<div class="card" style="margin-top:5em;">
+		<div class="card gradient-border" style="margin-top:5em;">
 			@*<img class="card-img-top" src="/images/MainMenu.png" alt="Landing Page for Food Truck">*@
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
@@ -30,7 +29,7 @@
 				<a href="https://github.com/davidrodjen/FoodTruck">Github Link</a>
 			</div>
 		</div>
-		<div class="card" style="margin-top:5em;">
+		<div class="card gradient-border" style="margin-top:5em;">
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 				@*<img class="card-img-top" src="/images/BlogITLanding.PNG" alt="BlogIT Landing Page" style="height: 285px;">*@
 				<div class="carousel-inner">
@@ -57,7 +56,7 @@
 	</div>
 
 	<div class="card-deck">
-		<div class="card" style="margin-top:5em;">
+		<div class="card gradient-border" style="margin-top:5em;">
 			@*<img class="card-img-top" src="/images/CompletedBrackets.PNG" alt="Completed Brackets" style="height: 190px;">*@
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
@@ -80,7 +79,7 @@
 				<a href="https://github.com/davidrodjen/BowlingTournamentDoubleBrackets">Github Link</a>
 			</div>
 		</div>
-		<div class="card" style="margin-top:5em;background-color: floralwhite">
+		<div class="card gradient-border" style="margin-top:5em;background-color: floralwhite">
 			<img class="card-img-top img-fluid" src="/images/ParadisePlayerSnip.PNG" alt="ParadisePlayer Phone Menu" style="height: 190px;display:block;margin-left:auto;margin-right:auto;border-left-width: 10px;width: 200px;">
 			<div class="card-body" style="background-color: floralwhite">
 				<h5 class="card-title">ParadisePlayer</h5>
@@ -116,6 +115,35 @@
 	.btn:hover {
 		transition: 1s ease-in-out;
 		background: #1F2833;
+	}
+	.gradient-border {
+		--border-width: 5px;
+		position: relative;
+		width: inherit;
+		height: inherit;
+		border-radius: var(--border-width);
+		padding: .5em .5em .5em .5em;
+	}
+
+	.gradient-border::after {
+		position: absolute;
+		content: "";
+		top: calc(-1 * var(--border-width));
+		left: calc(-1 * var(--border-width));
+		z-index: -1;
+		width: calc(100% + var(--border-width) * 2);
+		height: calc(100% + var(--border-width) * 2);
+		background: linear-gradient( 60deg, hsl(213, 24%, 16%), hsl(210, 2%, 78%), hsl(176, 96%, 45%), hsl(177, 40%, 45%) );
+		background-size: 300% 300%;
+		background-position: 0 50%;
+		border-radius: calc(2 * var(--border-width));
+		animation: moveGradient 6s alternate infinite;
+	}
+
+	@@keyframes moveGradient {
+		50% {
+			background-position: 100% 50%;
+		}
 	}
 </style>
 
