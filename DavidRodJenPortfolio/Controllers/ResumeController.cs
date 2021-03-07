@@ -32,26 +32,24 @@ namespace DavidRodJenPortfolio.Controllers
 
         readonly string Company1 = "DXC Technologies- Redmond Microsoft Campus-Seattle, WA February 2020- Present";
         readonly string Position1 = "Senior Field Technician IT/Audio Visual";
-        readonly string Description1 = "     Self-managing time and equipment under directive of senior regional managers. " +
-            "Engage in remote and onsite IT solutions, Quick Assist and streamlined " +
-            "solutions via accessible assortment of technical libraries of documentation. " +
-            "Solve a variety of issues regarding VPN connections and application hang/crash/freeze. " +
-            "Perform client and contract requests by traveling abroad to perform onsite training. " +
-            "Flexibility and team leadership roles pertaining to special onsite conference support and " +
-            "understanding of technical documents.Signal flow expertise pertaining to Microsoft Conference " +
-            "standardization with both new and legacy control devices.Remote services through " +
-            "Crestron system programming utilizing IP address notation.";
+        readonly string Description1 = "Self-manages time and equipment under directive of senior regional managers. Engages in remote and onsite IT " +
+            "solutions, Quick Assist and streamlined solutions via accessible technical libraries of documentation. Solves a variety of" +
+            "issues regarding VPN connections and application hang/crash/freeze. Perform client and contract requests by traveling" +
+            "abroad to perform onsite training. Flexible and assumes team leadership roles pertaining to special onsite conference" +
+            "support and application of technical documents. Signal flow expertise pertaining to Microsoft Conference" +
+            "standardization with both new and legacy control devices. Remote services through Crestron system programming" +
+            "utilizing IP address access. Featured in Microsoft IT Blog";
 
 
 
         readonly string Company2 = "Compass Group PLC- Redmond Microsoft Campus-Seattle, WA July 2015- March 2020";
         readonly string Position2 = "Audio Visual Technician/Preventative Maintenance Tier 1";
-        readonly string Description2 = "     Inspect technologies and electrical equipment to insure first time quality.Daily use of " +
-            "company inventory control programs.Manage personal equipment inventory utilizing basic coding " +
+        readonly string Description2 = "     Inspect technologies and electrical equipment to insure first time quality. Daily use of " +
+            "company inventory control programs. Manage personal equipment inventory utilizing basic coding " +
             "applications for programming behind network services. Provides onsite technical support for the " +
-            "Microsoft Campus ensuring seamless utilization of conference and private spaces.Having a thorough " +
-            "understanding of audio and visual systems.Troubleshoot and problem solve breaks in connection and " +
-            "repair systems; use of network tools to correct connection issues.Connect and network with clients " +
+            "Microsoft Campus ensuring seamless utilization of conference and private spaces. Presently maintains a thorough " +
+            "understanding of audio and visual systems. Troubleshoot and problem solve breaks in connection and " +
+            "repairs systems for telecommunications; use of network tools to correct connection issues. Connect and network with clients " +
             "from both national and international sites, assist in client day-to-day functions and provide immediate support when necessary";
 
 
@@ -68,7 +66,7 @@ namespace DavidRodJenPortfolio.Controllers
 
         readonly string Company4 = "The Seattle Gym- Seattle, WA";
         readonly string Position4 = "General Manager/Billing Coordinator";
-        readonly string Description4 = "     Led a service team of 35 employees.Worked with team members to streamline processes and improvements. " +
+        readonly string Description4 = "     Led a service team of 35 employees. Worked with team members to streamline processes and improvements. " +
                 "Led monthly safety meetings, and daily stand-up meetings. " +
                 "Daily use of Microsoft Excel, Word and Outlook. " +
                 "Ran individual improvement meetings for each team member and verified each employee had appropriate certifications. " +
