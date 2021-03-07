@@ -5,6 +5,8 @@
 # David Rodriguez-Jenkins' Portfolio
 A business professional website created by and for David Rodriguez-Jenkins' for surveyors of employment opportunities.
 
+## Live Site
+[David Rodriguez-Jenkins Portfolio](https://davidrodriguezjenkinsportfolio.azurewebsites.net/)
 
 ## Coding Guidelines
 See [Guidelines](CodeGuidelines.md)
